@@ -12,14 +12,16 @@ param
 $userpassword = ConvertTo-SecureString -String $ClientSecret -AsPlainText -Force
 $credential = New-Object -TypeName System.Management.Automation.PSCredential -argumentlist $ApplicationId, $userpassword
 
+Install-Module -Name PowerShellGet -Force
+Install-Module -Name Az -Force
+
   'Log in to Azure...'
    Connect-AzAccount `
         -ServicePrincipal `
         -Credential $credential `
         -TenantId $TenantId 
 
-Install-Module -Name PowerShellGet -Force
-Install-Module -Name Az -Force
+
 
 function getPipelineDependencies {
     param([System.Object] $activity)
