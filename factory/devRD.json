@@ -1,0 +1,9 @@
+{
+	"name": "devRD",
+	"location": "eastus2",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "064405fb-a02a-4042-bc2e-2d7bf9e96128",
+		"tenantId": "e4e34038-ea1f-4882-b6e8-ccd776459ca0"
+	}
+}
